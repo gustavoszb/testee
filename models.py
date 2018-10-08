@@ -65,21 +65,3 @@ class DisciplinaOfertada(models.Model):
             if not(self.curso in do):
                 raise Exception('Curso invalido')
             '''
-            t9a1= DisciplinaOfertada.objects.filter(curso=self.curso)
-            t9a2= DisciplinaOfertada.objects.filter(ano=self.ano)
-            t9a3= DisciplinaOfertada.objects.filter(semestre=self.semestre)
-            t9a4= DisciplinaOfertada.objects.filter(turma=self.turma)
-            t9a5= DisciplinaOfertada.objects.filter(curso=self.curso)
-            if len(t9a1)>0 and len(t9a2)>0 and len(t9a3)>0 and len(t9a4)>0 and len(t9a5)>0:
-                raise Exception('Disipina Cadastrada')'''
-            
-            super(DisciplinaOfertada,self).save()
-
-gu = DisciplinaOfertada()
-gu.curso = 'ADS'
-gu.ano = '2018'
-gu.semestre = '2'
-gu.turma = '2C'
-gu.professor = '01'
-gu.disciplina = '100'
-print(gu)
